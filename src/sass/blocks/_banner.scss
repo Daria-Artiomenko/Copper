@@ -1,0 +1,33 @@
+.banner {
+    min-height: 483px;
+    background: url('../img/images/BG/Sales_BG.jpg') center (center/cover) no-repeat;
+    padding: 80px 0;
+    position: relative;
+    &__title {
+        color: #FFF;
+        font-family: 'Lighthaus', serif;
+        font-size: 140px;
+        font-weight: 400;
+        line-height: 74.9%;
+    }
+    &__text {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        color: #FFF;
+        font-size: 35px;
+        font-weight: 400;
+        line-height: 96.4%;
+        max-width: 533px;
+    }
+    span {
+        position: absolute;
+        color: #FFF;
+        font-family: 'Lighthaus', serif;
+        text-align: right;
+        right: 0;
+        bottom: 0;
+        font-size: 160px;
+        font-weight: 400;
+        line-height: 74.9%;
+    }
+}
