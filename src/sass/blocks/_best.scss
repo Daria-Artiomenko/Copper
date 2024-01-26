@@ -109,4 +109,19 @@
             background: linear-gradient(66deg, #5E3928 -24.09%, #E4A16F 104.02%);
         }
     }
+    .sale {
+        position: absolute;
+        top: 27px;
+        left: 0;
+        width: 84px;
+        height: 36px;
+        background: #9B0000;
+        color: #FFF;
+        text-align: center;
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 96.4%; /* 19.28px */
+        text-transform: uppercase;
+        padding-top: 9px;
+    }
 }
