@@ -12,11 +12,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-const slider = (slides, next, prev) => {
+const slider = (slides, next, prev, pagination, paginationActive) => {
   let slideIndex = 1;
-  const items = document.querySelectorAll(slides);
-  const nextBtn = document.querySelector(next);
-  const prevBtn = document.querySelector(prev);
+  const items = document.querySelectorAll(slides),
+    nextBtn = document.querySelector(next),
+    prevBtn = document.querySelector(prev),
+    paginationItems = document.querySelectorAll(pagination);
   function showSlides(n) {
     if (n > items.length) {
       slideIndex = 1;
@@ -28,6 +29,10 @@ const slider = (slides, next, prev) => {
       item.style.display = 'none';
       item.classList.add('animated');
     });
+    paginationItems.forEach(item => {
+      item.classList.remove(paginationActive);
+    });
+    paginationItems[slideIndex - 1].classList.add(paginationActive);
     items[slideIndex - 1].style.display = 'flex';
   }
   showSlides(slideIndex);
@@ -38,13 +43,11 @@ const slider = (slides, next, prev) => {
     plusSlide(1);
     items[slideIndex - 1].classList.remove('slideInLeft');
     items[slideIndex - 1].classList.add('slideInRight');
-    console.log(1);
   });
   prevBtn.addEventListener('click', () => {
     plusSlide(-1);
     items[slideIndex - 1].classList.remove('slideInRight');
     items[slideIndex - 1].classList.add('slideInLeft');
-    console.log(-1);
   });
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (slider);
@@ -119,7 +122,7 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
 
-  (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('.best-slide', '.best-next', '.best-prev');
+  (0,_modules_slider__WEBPACK_IMPORTED_MODULE_0__["default"])('.best-slide', '.best-next', '.best-prev', '.slider__pagination-item', 'slider__pagination-active');
 });
 })();
 

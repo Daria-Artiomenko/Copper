@@ -1,10 +1,11 @@
-const slider = (slides, next, prev) => {
+const slider = (slides, next, prev, pagination, paginationActive) => {
 
     let slideIndex = 1;
 
-    const items = document.querySelectorAll(slides);
-    const nextBtn = document.querySelector(next);
-    const prevBtn = document.querySelector(prev);
+    const items = document.querySelectorAll(slides),
+          nextBtn = document.querySelector(next),
+          prevBtn = document.querySelector(prev),
+          paginationItems = document.querySelectorAll(pagination);
 
     function showSlides(n) {
         if (n > items.length) {
@@ -19,6 +20,10 @@ const slider = (slides, next, prev) => {
             item.classList.add('animated');
         })
 
+        paginationItems.forEach(item => {
+            item.classList.remove(paginationActive);
+        })
+        paginationItems[slideIndex - 1].classList.add(paginationActive);
         items[slideIndex - 1].style.display = 'flex';
     }
 
@@ -32,14 +37,12 @@ const slider = (slides, next, prev) => {
             plusSlide(1);
             items[slideIndex - 1].classList.remove('slideInLeft');
             items[slideIndex - 1].classList.add('slideInRight');
-            console.log(1);
     });
 
     prevBtn.addEventListener('click', () => {
             plusSlide(-1);
             items[slideIndex - 1].classList.remove('slideInRight');
             items[slideIndex - 1].classList.add('slideInLeft');
-            console.log(-1);
     });
 
 };
