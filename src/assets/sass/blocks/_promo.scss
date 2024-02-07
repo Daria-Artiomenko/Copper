@@ -1,0 +1,62 @@
+.promo {
+    background:url('../img/images/BG/Main_BG.jpg')  center (center/cover) no-repeat;
+    padding-top: 230px;
+    min-height: 896px;
+    // height: 100vh;
+    // width: 100%;
+
+    &__text {
+        font-family: 'Lighthaus', serif;
+        font-size: 100px;
+        font-weight: 400;
+        color:#fff;
+        line-height: 74.9%;
+    }
+    &__title {
+        color: #FFF;
+        font-size: 50px;
+        font-weight: 700;
+        max-width: 533px;
+        line-height: 96.4%;
+    }
+    &__price {
+        margin-top: 40px;
+        display: flex;
+        color:#FFF;
+        gap: 109px;
+        &-text {
+            font-size: 30px;
+            font-weight: 300;
+        }
+        &-number {
+            font-size: 30px;
+            font-weight: 700;
+        }
+    }
+    
+}
+
+.line {
+    margin: 50px 0;
+    width: 623px;
+    height: 1px;
+    background: linear-gradient(90deg, #FFF -0.02%, rgba(255, 255, 255, 0.00) 100.02%);
+}
+
+.button {
+    display: block;
+    width: 327px;
+    height: 50px;
+    background: linear-gradient(92deg, #5E3928 20.13%, #E4A16F 92.93%);
+    color:#fff;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    border: none;
+    &-promo {
+        margin-top: 41px;
+    }
+    &-catalog {
+        margin: 0 auto;
+    }
+}

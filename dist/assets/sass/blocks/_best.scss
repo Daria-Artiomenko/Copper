@@ -56,7 +56,11 @@
     &__slide {
         display: flex;
         gap: 30px;
+        
     }
+    // .best-slide {
+    //     display: none;
+    // }
     &__card {
         position: relative;
         .like{
